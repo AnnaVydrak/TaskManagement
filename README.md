@@ -31,5 +31,3 @@ RabbitMQ queue must be running and reachable for the service to operate correctl
 The current setup assumes a single environment (Development) for simplicity.
 
 No built-in retry policies or circuit breakers for message handling—consider adding Polly or similar if needed.
-
-Monitoring and logging are minimal; use tools like Seq or Prometheus + Grafana for production-grade observability.

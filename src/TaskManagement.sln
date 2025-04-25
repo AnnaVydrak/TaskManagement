@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement", "TaskManagement\TaskManagement.csproj", "{1269BD15-12B8-4836-9FE4-280A650B2733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.UnitTests", "TaskManagement.UnitTests\TaskManagement.UnitTests.csproj", "{D4E3B0A7-1046-411E-9DED-07D894865A5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1269BD15-12B8-4836-9FE4-280A650B2733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1269BD15-12B8-4836-9FE4-280A650B2733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1269BD15-12B8-4836-9FE4-280A650B2733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1269BD15-12B8-4836-9FE4-280A650B2733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E3B0A7-1046-411E-9DED-07D894865A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E3B0A7-1046-411E-9DED-07D894865A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E3B0A7-1046-411E-9DED-07D894865A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E3B0A7-1046-411E-9DED-07D894865A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

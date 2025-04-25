@@ -1,0 +1,46 @@
+version: '3.4'
+
+services:
+  taskmanagement-api:
+    image: taskmanagement-api
+    build:
+      context: .
+      dockerfile: src/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=taskdb-postgres;Port=5432;Database=TaskDb;Username=postgres;Password=example
+      - UseMessageBus=RabbitMQ
+      - RabbitMQ__Host=amqp://guest:guest@rabbitmq:5672
+    ports:
+      - "5007:80"
+    depends_on:
+      - taskdb-postgres
+      - rabbitmq
+    networks:
+      - taskmanagement
+
+  taskdb-postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: TaskDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"
+    networks:
+      - taskmanagement
+
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - taskmanagement
+
+networks:
+  taskmanagement:
+    driver: bridge
